@@ -1,0 +1,44 @@
+---
+title: "Patient_admissions"
+author: "Neha"
+date: "16/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r load the package}
+library(tidyverse)
+
+```
+
+
+
+
+```
+## Now upload the population_demographic csv
+```{r load-data}
+getwd()
+data1<-read_csv("population_demographics.csv")
+data2 <- read_csv("pop_demo_data_dictionary.csv")
+glimpse(data1)
+```
+## checking the data1 for missing value and outliers
+```{r}
+data1 %>% summary()
+```
+
+After checking the value in data 1 it seems the maximum age is  150 which seems not right
+
+```{r}
+data1$age %>% table()
+```
+# so there are 125 entries with age 150 which can be considered not correct.
+```{r}
+
+data1$deprivation %>% table()
+```
