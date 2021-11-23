@@ -1,0 +1,26 @@
+---
+title: "Patient_admissions"
+author: "Neha"
+date: "16/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r load the package}
+library(tidyverse)
+
+```
+
+
+## List of patients who were admitted in 2018
+```{r - Load the data}
+data <- read_csv("Cancer related admission.csv")
+
+
+```
+
