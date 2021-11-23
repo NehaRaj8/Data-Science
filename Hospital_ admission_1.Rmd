@@ -12,14 +12,14 @@ knitr::opts_chunk$set(echo = TRUE)
 ## R Markdown
 
 ```{r load the package}
+
 library(tidyverse)
 
-```
-
-
-
 
 ```
+
+
+
 ## Now upload the population_demographic csv
 ```{r load-data}
 getwd()
@@ -33,6 +33,8 @@ data1 %>% summary()
 ```
 
 After checking the value in data 1 it seems the maximum age is  150 which seems not right
+Also there are 71 NA for deprivations. Hence there are 71 values missing from deprivation
+
 
 ```{r}
 data1$age %>% table()
